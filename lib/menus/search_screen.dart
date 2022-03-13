@@ -28,7 +28,7 @@ class SearchScreen extends StatelessWidget {
           backgroundColor: Colors.grey.shade200,
           body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-              if (constraints.maxWidth <= 500) {
+              if (constraints.maxWidth <= 600) {
                 return searchScreenPage(
                   gridCount: 2,
                 );
@@ -152,52 +152,3 @@ class searchScreenPage extends StatelessWidget {
     );
   }
 }
-
-//List Grid Category
-// Widget _buildCategoryList() {
-//   return Padding(
-//     padding: const EdgeInsets.all(20.0),
-//     child: GridView.count(
-//       shrinkWrap: true, //mengatur scrollable
-//       crossAxisCount: 2,
-//       crossAxisSpacing: 16,
-//       mainAxisSpacing: 16,
-//       children: menuList.map((menuFood) {
-//         return InkWell(
-//           onTap: () {},
-//           child: Card(
-//             elevation: 5,
-//             color: Color.fromRGBO(menuFood.bgcolor[0], menuFood.bgcolor[1],
-//                 menuFood.bgcolor[2], menuFood.bgcolor[3]),
-//             shape:
-//                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.stretch,
-//               children: [
-//                 SizedBox(
-//                   height: 10,
-//                 ),
-//                 Expanded(
-//                   child: Image.asset(
-//                     menuFood.imageAssets,
-//                   ),
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.only(top: 10, bottom: 10),
-//                   child: Text(
-//                     menuFood.name,
-//                     textAlign: TextAlign.center,
-//                     style: TextStyle(
-//                       fontSize: 16.0,
-//                       fontFamily: 'Raleway',
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         );
-//       }).toList(),
-//     ),
-//   );
-// }
