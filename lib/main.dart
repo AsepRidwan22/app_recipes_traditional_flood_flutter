@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     FavoriteScreen(),
     Center(
       child: Text(
-        'Gak Keburu',
+        'Profil',
         style: optionStyle,
       ),
     ),
@@ -80,14 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
       showSelectedLabels: false,
       backgroundColor: Colors.white,
       elevation: 0, //ketebalan shadow
-      items: [
-        BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),
+      items: const [
+        BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+        BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.search)),
+        BottomNavigationBarItem(label: 'Favorite', icon: Icon(Icons.favorite)),
         BottomNavigationBarItem(
-            title: Text('Favorit'), icon: Icon(Icons.search)),
-        BottomNavigationBarItem(
-            title: Text('Search'), icon: Icon(Icons.favorite)),
-        BottomNavigationBarItem(
-            title: Text('Profile'), icon: Icon(Icons.account_circle))
+            label: 'Profil', icon: Icon(Icons.account_circle))
       ],
       onTap: (index) {
         _onItemTapped(index);
